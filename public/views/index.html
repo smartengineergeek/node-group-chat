@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Chat</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <ul id="messages"></ul>
+            <p id="isTyping"></p>
+            <form action="/" method="POST" id="groupChatForm">
+                <input id="messageText" autocomplete="off" autofocus="on" oninput="isTyping(event)" data-emoji-picker="true"
+                    placeholder="type your message here..." /><button>Send</button>
+            </form>
+    </body>
+    <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="../js/emojiPicker.js"></script> 
+    <script type="text/javascript" src="../js/chat.js"></script>
+    <script>
+        (() => {
+          new EmojiPicker()
+        })()
+    </script>
+</html>
