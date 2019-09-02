@@ -1,8 +1,5 @@
 var socket = io.connect('http://localhost:8080');
-function isTyping(event){
-    console.log(event);
-    $("#isTyping").text('someone is typing');
-}
+
 // submit text message without reload/refresh the page
 $('form').submit(function(event){
     event.preventDefault(); // page reloading is prevented

@@ -7,7 +7,51 @@ form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 
 #messages li { padding: 5px 10px; }
 #messages li:nth-child(odd) { background: #eee; }
 .emoji {
-    height: 1em; /*edit for height*/
+    height: em; /*edit for height*/
     margin: 0 .05em 0 .1em;
     vertical-align: -0.1em;
+}
+.chat-form{
+    display: flex;
+}
+.emoji-icon-span{
+    padding: 20px;
+}
+.is-typing{
+    color: blueviolet;
+}
+.app-heading{
+    color: #fff;
+    background: #000;
+    padding: 5px;
+    font-style: italic;
+    /* display: flex; */
+    padding-left: 40%;
+    width: 100%;
+}
+/* .app-heading h1{
+    padding-top: 10px;
+}
+.app-heading a{
+    padding-left: 20px;
+} */
+.flex-container {
+    list-style: none;
+    
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    float: left;
+  }
+  
+.flex-start { 
+    -webkit-align-items: flex-start;
+    align-items: flex-start; 
+}
+.flex-item{
+    padding: 10px;
 }
