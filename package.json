@@ -6,7 +6,7 @@
   "homepage": "https://avinashmahlawat.github.io/node-group-chat/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "set NODE_ENV=production&& nodemon index.js"
   },
   "keywords": [
     "nodejs",
@@ -15,6 +15,7 @@
   "author": "avinash mahlawat",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.1.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "nodemon": "^1.19.1",

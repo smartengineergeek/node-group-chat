@@ -3,6 +3,7 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const path = require('path');
+require('dotenv').config();
 
 app.use(express.static(path.join(__dirname+'/public')))
 
@@ -24,5 +25,6 @@ io.sockets.on('connection', function(socket){
 })
 
 http.listen(8080, function(){
+    console.log(process.env.NODE_ENV)
     console.log('listening on *:8080');
 })
