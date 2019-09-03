@@ -1,4 +1,6 @@
-var socket = io.connect('http://localhost:8080');
+var connURL = process.env.node_env === 'production' ? 'https://avinashmahlawat.github.io/node-group-chat': 'http://localhost:8080';
+
+var socket = io.connect(connURL);
 
 // submit text message without reload/refresh the page
 $('form').submit(function(event){
