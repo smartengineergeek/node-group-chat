@@ -27,13 +27,12 @@
             <p id="isTyping" class="is-typing"></p>
             <form action="/" method="POST" id="groupChatForm" class="chat-form">
                 <input id="messageText" autocomplete="off" autofocus="on"  data-emoji-picker="true"
-                    onkeypress="setTimeout(isTyping(),4000); setInterval(notTyping,5000)"
                     placeholder="type your message here..." class="input-message"/>
                     <button>Send</button>
             </form>
     </body>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="/js/emojiPicker.js"></script> 
     <script type="text/javascript" src="/js/chat.js"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
@@ -50,5 +49,6 @@
 
 <!--
     oninput="isTyping(event)"
+    onkeypress="setTimeout(isTyping(), 4000); setInterval(notTyping,5000)"
 -->
 

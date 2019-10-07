@@ -5,11 +5,12 @@ const io = require('socket.io')(http);
 const path = require('path');
 require('dotenv').config();
 
-app.use(express.static(path.join(__dirname+'/public')))
 
 app.get('/', function(request, response){
     response.sendFile(path.join(__dirname+'/index.html'));
-})
+});
+
+app.use(express.static(path.join(__dirname+'/public')));
 
 io.sockets.on('connection', function(socket){
     socket.on("username", function(username){
@@ -22,9 +23,9 @@ io.sockets.on('connection', function(socket){
     socket.on('chat_message', function(message){
         io.emit('chat_message', '<strong>'+socket.username+'</strong>:'+message);
     })
-})
+});
 
 http.listen(8080, function(){
-    console.log(process.env.NODE_ENV)
+    console.log(process.env.NODE_ENV);
     console.log('listening on *:8080');
-})
+});
